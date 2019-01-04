@@ -11,6 +11,7 @@ namespace DelegateFormOfAnonymousMethod
         static void Main(string[] args)
         {
             IntList xs = new IntList(7, 9, 13, 24, 25, 28);
+            Console.WriteLine("IntList class elements:");
             xs.Act(Console.WriteLine);
             Console.WriteLine("Print only the even numbers of the IntList:");
             //this is an anonymus method:
@@ -25,13 +26,11 @@ namespace DelegateFormOfAnonymousMethod
                 return x >= 25;
             })
                 .Act(Console.WriteLine);
-
+            Console.WriteLine("Prints the sum of elements in IntList class:");
             int sum = 0;
             xs.Act(delegate (int x)
             {
                 sum += x;
-                Console.WriteLine(sum);
-
             });
             Console.ReadLine();
         }
