@@ -38,5 +38,23 @@ namespace TestTimeTests
             t21.minutes = 100;
             Assert.Equal(100, t22.minutes);
         }
+
+        [Fact]
+        public void ShouldSubstractTwoValues()
+        {
+            Time t5 = new Time(12, 5);
+            Time t6 = new Time(20, 5);
+            Time t56 = t5 - t6;
+            Assert.Equal(-480, t56.minutes);
+        }
+
+        [Fact]
+        public void ShouldAddTwoStructValues()
+        {
+            Time t3 = new Time(2, 50);
+            Time t4 = new Time(5, 15);
+            Time t34 = t3 + t4;
+            Assert.Equal(485, t34.minutes);
+        }
     }
 }
