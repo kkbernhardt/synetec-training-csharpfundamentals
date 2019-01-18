@@ -13,5 +13,14 @@ namespace TestTimeTests
 
             Assert.Equal(310, testTime.minutes);
         }
+
+        [Fact]
+        public void ShouldGiveBackMinutesValueOfClass()
+        {
+            Time2 testTime2 = new Time2(4, 100);
+            Assert.Equal(340, testTime2.minutes);
+        }
+
+
     }
 }
