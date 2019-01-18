@@ -56,5 +56,13 @@ namespace TestTimeTests
             Time t34 = t3 + t4;
             Assert.Equal(485, t34.minutes);
         }
+
+        [Fact]
+        public void ShouldImplicitlyConvertFromIntToTimeType()
+        {
+            int v2 = 100;
+            Time timeImpl = v2;
+            Assert.IsType<Time>(timeImpl);
+        }
     }
 }
