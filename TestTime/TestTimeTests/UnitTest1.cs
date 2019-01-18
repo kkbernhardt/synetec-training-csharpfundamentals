@@ -64,5 +64,13 @@ namespace TestTimeTests
             Time timeImpl = v2;
             Assert.IsType<Time>(timeImpl);
         }
+
+        [Fact]
+        public void ShouldExplicitlyConvertFromTimeTypeToInt()
+        {
+            Time v = new Time(8, 50);
+            int timeExpl = (int)v;
+            Assert.IsType<int>(timeExpl);
+        }
     }
 }
