@@ -21,6 +21,13 @@ namespace TestTimeTests
             Assert.Equal(340, testTime2.minutes);
         }
 
-
+        [Fact]
+        public void ShouldStructValueVariableDoesNotChangeAfterAssignedANewValue()
+        {
+            Time t1 = new Time(9, 30);
+            Time t2 = t1;
+            t1.minutes = 100;
+            Assert.NotEqual(100, t2.minutes);
+        }
     }
 }
