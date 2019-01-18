@@ -42,6 +42,11 @@ namespace TestGenericStructTests
             Assert.IsType<Pair<string, int>>(appointment.Fst);
         }
 
-
+        [Fact]
+        public void ShouldSwapPairTypes()
+        {
+            Pair<string, int> pairFirst = new Pair<string, int>();
+            Assert.IsType<Pair<int, string>>(pairFirst.Swap());
+        }
     }
 }
