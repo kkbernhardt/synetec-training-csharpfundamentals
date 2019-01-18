@@ -29,5 +29,14 @@ namespace TestTimeTests
             t1.minutes = 100;
             Assert.NotEqual(100, t2.minutes);
         }
+
+        [Fact]
+        public void ShouldClassVariableChangeAppliesToAllVariable()
+        {
+            Time2 t21 = new Time2(9, 30);
+            Time2 t22 = t21;
+            t21.minutes = 100;
+            Assert.Equal(100, t22.minutes);
+        }
     }
 }
