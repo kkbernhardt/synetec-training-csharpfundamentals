@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestDelegate
 {
-    class Program
+    public class Program
     {
         public delegate void IntAction(int num);
         //Declare a method with the same signature as the delegate
