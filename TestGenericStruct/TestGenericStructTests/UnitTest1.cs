@@ -26,5 +26,12 @@ namespace TestGenericStructTests
             Pair<string, double> fourthPerson = new Pair<string, double>();
             Assert.Null(fourthPerson.Fst);
         }
+
+        [Fact]
+        public void ShouldGiveBackZeroWhenNoValueAssignedToDouble()
+        {
+            Pair<string, double> fourthPerson = new Pair<string, double>();
+            Assert.Equal(0, fourthPerson.Snd);
+        }
     }
 }
