@@ -19,5 +19,12 @@ namespace TestGenericStructTests
             Pair<string, int> pairStruct = new Pair<string, int>("Andrew", 2);
             Assert.IsType<int>(pairStruct.Snd);
         }
+
+        [Fact]
+        public void ShouldGiveBackNullwhenNoValueAssignedToString()
+        {
+            Pair<string, double> fourthPerson = new Pair<string, double>();
+            Assert.Null(fourthPerson.Fst);
+        }
     }
 }
