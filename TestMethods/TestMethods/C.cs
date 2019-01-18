@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestMethods
 {
-    class C : B
+    public class C : B
     {
         public new static void SM()
         {
