@@ -33,5 +33,15 @@ namespace TestGenericStructTests
             Pair<string, double> fourthPerson = new Pair<string, double>();
             Assert.Equal(0, fourthPerson.Snd);
         }
+
+        [Fact]
+        public void ShouldGivePairType()
+        {
+            Pair<string, int> pairFirst = new Pair<string, int>();
+            Pair<Pair<string, int>, string> appointment = new Pair<Pair<string, int>, string>(pairFirst, "local GP");
+            Assert.IsType<Pair<string, int>>(appointment.Fst);
+        }
+
+
     }
 }
